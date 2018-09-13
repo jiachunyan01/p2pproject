@@ -1,0 +1,46 @@
+//定义全局
+@colorWhite:white;
+@colorBlue:#00a8ff;
+@colordark:#2e8ece;
+*{
+    padding: 0;
+    margin: 0;
+}
+//重置导航条的样式
+.navbar-inverse{
+    border-radius: 0;
+    .navbar-brand{
+    color:@colorWhite;
+    font-size: 24px;
+    font-style:italic;
+
+     span{
+         font-size:17px;
+         margin-right:5px;
+     }
+    }
+    .navbar-nav{
+        &>li{
+            &>a{
+         color:@colorWhite;
+         &:hover{
+             color:@colorBlue;
+             text-decoration: underline;
+             }
+            }
+        }
+    }
+}
+.navbar-default .navbar-nav>li>a{
+    font-size:16px;
+    line-height: 40px;
+    text-align: center;
+    &:hover{
+        color: @colorBlue;
+        background-color: #efefef;
+    }
+}
+//工具提示图片的大小
+.tooltip img{
+    width: 100px;
+}

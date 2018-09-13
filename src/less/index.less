@@ -1,0 +1,83 @@
+//引入页头样式
+@import url("header.less");
+
+//简介
+.feature{
+    margin-top: 20px;
+    .row{
+       &>div{
+            background: url("../../../images/feature01.png") no-repeat left center;
+            height: 65px;
+            padding-left: 80px;
+            margin-bottom: 10px;
+            h4{
+            font-weight: bold; 
+            margin: 0;
+            padding: 0;
+            }
+        }
+        &>div:nth-of-type(2){
+           background-image: url("../../../images/feature02.png"); 
+        }
+       &>div:nth-of-type(3){
+           background-image: url("../../../images/feature03.png"); 
+        }
+    }
+}
+@media all and(max-width:520px){
+    .hd{
+        display: none;
+    }
+}
+//投资信息
+.panel{
+    border: none;
+    box-shadow: none;
+}
+.panel-default{
+    &> .panel-heading{
+         background-color: transparent;
+         border: none;
+         padding: 0;
+         border-bottom:1px solid #ccc;
+         h1{
+             font-weight: bold;
+             color: @colordark; 
+             font-size: 24px;
+             margin: 0px;
+             padding: 10px 0px;
+             border-bottom:3px solid @colordark;  
+         }
+ 
+         p{
+             margin-top: 20px;
+         }
+     }
+ //新闻文章
+     .panel-body{
+        padding: 20px 0px;
+
+        ul{
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+
+            li{
+                line-height: 35px;
+                border-bottom:1px dotted #ccc;
+                
+                a{
+                    color: #666;
+
+                    &:hover{
+                        text-decoration: none;
+                        color: @colorBlue; 
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+//引入页脚
+@import url("footer.less");
