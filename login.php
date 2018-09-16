@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>登陆界面</title>
     <!-- 引入bootstrap -->
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <!-- 引入bootstrapValidator -->
@@ -33,7 +33,7 @@
                 <h3 class="panel-title">用户登录</h3>
             </div>
             <div class="panel-body">
-                <form id="regForm" class="form-horizontal">
+                <form id="loginForm" class="form-horizontal" method="post">
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-3 control-label">用户名：</label>
                     <div class="col-sm-9">
@@ -60,6 +60,26 @@
 <!-- 引入尾部 -->
 <?php require_once("footer.php");
 ?>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">标题</h4>
+      </div>
+      <div class="modal-body" id="msgContent">
+      内容
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭按钮</button>
+
+      </div>
+    </div>
+  </div>
+</div>
 <!-- 引入jquery -->
 <script src="./lib/jquery/jquery.min.js"></script>
 <!-- 引入bootstrapValidator.js -->

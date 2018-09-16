@@ -10,7 +10,7 @@ var sass=require("gulp-sass");
 var uglify=require("gulp-uglify");
 var rename=require("gulp-rename");
 var cleanCss=require("gulp-clean-css");
-
+var babel=require("gulp-babel");
 //引入热刷新模块
 var livereload=require("gulp-livereload");
 
@@ -43,6 +43,9 @@ gulp.task("sassTask",function () {
 //配置js压缩任务
 gulp.task("uglifyJS",function () {
     gulp.src('./src/js/*.js') 
+    .pipe(babel({
+        presets: ['@babel/env']
+    }))
         .pipe(uglify()) 
         .pipe(rename(function (path) {
             path.basename += ".min"; 
