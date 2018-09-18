@@ -14,7 +14,8 @@
 <!-- 引入头部信息 -->
 <?php require_once("header.php");
 ?>
-投资界面
+
+借款页面
 
 
 
