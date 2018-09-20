@@ -86,7 +86,7 @@ $(function () {
             const reqUrl = "./api/userAdd.php";
             const data = $form.serialize();
             $.post(reqUrl, data, function (result) {
-                console.log(result);
+                //console.log(result);
                 if (result.isSuccess) {
                     alert(result.message);
                     location.href = "./login.php";

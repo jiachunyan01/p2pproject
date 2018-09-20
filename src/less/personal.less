@@ -11,6 +11,9 @@
         }
     }
     #mainContent{
+        #clickBtn{
+            display: none;
+        }
         .panel-body{
             padding: 10px 30px;
 
@@ -64,9 +67,74 @@
             }
         }
 
-
-        
     }
+}
+
+
+        //小屏和超小采用定位
+        @media all and(max-width:768px){
+            #personal{
+                height:1000px;
+                position: relative;
+                //菜单打开
+                left:0px;
+                transition: all 1s;
+                //左边
+                #leftTreeMenu{
+                    position: absolute;
+                    left:0px;
+
+                }
+                //右边
+                #mainContent{
+                    position: absolute;
+                    right:-50%;
+
+                    #clickBtn{
+                        position: absolute;
+                        top:0px;
+                        z-index: 1000;
+                        display: inline-block;
+                    }
+                }
+            }
+            //菜单关闭
+            #personal.active{
+                left: -50%; 
+            }
+        }
+//借款申请表单样式
+#debtBorrow{
+    height: 100%;
+    padding:20px;
+    background-color: #F4F8FA;
+    border-left: 2px solid #0099DD;
+    margin-bottom: 20px;
+}
+#debtBorrow h3{
+    color:#09d;
+}
+
+#borrowForm{
+    width: 60%;
+    margin: 0px auto;
+}
+
+.list-group{
+    margin-bottom: 15px;
+
+}
+
+.panel-group .panel+.panel{
+    margin-top: 15px;
+
+}
+.panel-heading {
+    border-bottom: 0px;
+   
+}
+.panel{
+    margin-bottom: 15px;
 }
 
 //引入页脚

@@ -28,7 +28,7 @@
 <!--  g根据当前状态显示不同菜单 -->
 <script>
 $.get("./api/checkState.php",function(data){
-console.log(data);
+//console.log(data);
 //处理前端逻辑
 if(data.isSuccess){
     //显示登录后的菜单
